@@ -15,3 +15,4 @@ void qinit(Queue* q);
 int q_is_empty(Queue* q);
 int q_is_full(Queue* q);
 int qcompare(Queue* q, element* s);
+int find_straight(const char* str);
