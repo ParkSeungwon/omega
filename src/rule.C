@@ -59,4 +59,5 @@ int main() {
 	for(int i=2; i<p[0]*p[1]+2; i++) printf("%c", p[i]);
 	printf("\n");
 	printf("%d", find_straight("OOs"));
+	free(p);
 }

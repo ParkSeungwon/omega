@@ -2,6 +2,8 @@
 #include"queue.h"
 extern char board[20][20];
 extern struct Queue queue;
+const char *win_string[] = {"sOOOO", "OsOOO", "OOsOO", "OOOsO", "OOOOs"};
+const char *check_string[] = {" sOOO ", " OsOO ", " OOsO ", " OOOs ", "O OsO O"};
 
 int find_straight(const char* str) {//" rOOO " -> r: return space
 	char st[10] = {};
