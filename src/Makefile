@@ -10,4 +10,4 @@ all : $(OBJ) $(MAIN_OBJ)
 	$(CC)  $(INCLUDE) $(CFLAG) $< -o $@
 
 ../obj/%.x : %.C
-	$(CC)  $(INCLUDE) $(CFLAG) $< -o $@
+	$(CC)  $(INCLUDE) -x c $(CFLAG) $< -o $@

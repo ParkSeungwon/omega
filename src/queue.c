@@ -9,6 +9,7 @@ void qinsert(Queue* q, element n) {
 }
 
 element qpop(Queue* q) {
+	if(q_is_empty(q)) exit(1);
 	element r = q->data[q->front++];
 	if(q->front == MAX) q->front = 0;
 	return r;
@@ -30,8 +31,7 @@ int q_is_full(Queue* q) {
 	return q->front == q->rear + 1 || (q->front == 0 && q->rear == MAX);
 }
 void qinit(Queue* q) {
-	q->front = 0;
-	q->rear = 0;
+	q->front = q->rear = 0;
 }
 int qcompare(Queue* q, element* s) {
 	for(int i = q->front, j=0; i != q->rear; i++) {
