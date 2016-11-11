@@ -1,11 +1,9 @@
 #include<string.h>
 #include"queue.h"
 extern char board[20][20];
-extern struct Queue queue;
-const char *win_string[] = {"sOOOO", "OsOOO", "OOsOO", "OOOsO", "OOOOs"};
-const char *check_string[] = {" sOOO ", " OsOO ", " OOsO ", " OOOs ", "O OsO O"};
+extern Queue queue;
 
-int find_straight(const char* str) {//" rOOO " -> r: return space
+int find_straight(const char* str) {//" sOOO " -> s : return space
 	char st[10] = {};
 	strcpy(st, str);
 	int rx = 0, ry = 0, r;
@@ -18,7 +16,7 @@ int find_straight(const char* str) {//" rOOO " -> r: return space
 	}
 	length = i;
 
-	qinit(&queue);
+	qinit(&queue);//W
 	for(int y=0; y<20; y++) {
 		qinit(&queue);
 		for(int x=0; x<20; x++) {
@@ -31,7 +29,7 @@ int find_straight(const char* str) {//" rOOO " -> r: return space
 			}
 		}
 	}
-	qinit(&queue);
+	qinit(&queue);//N
 	for(int x=0; x<20; x++) {
 		qinit(&queue);
 		for(int y=0; y<20; y++) {
@@ -44,7 +42,7 @@ int find_straight(const char* str) {//" rOOO " -> r: return space
 			}
 		}
 	}
-	qinit(&queue);
+	qinit(&queue);//NW
 	for(int x=0; x<20; x++) {
 		qinit(&queue);
 		for(int y=0; y<20 && x+y < 20; y++) {
@@ -70,7 +68,7 @@ int find_straight(const char* str) {//" rOOO " -> r: return space
 			}
 		}
 	}
-	qinit(&queue);
+	qinit(&queue);//NE
 	for(int x=0; x<20; x++) {
 		qinit(&queue);
 		for(int y=0; y<20 && x-y >= 0; y++) {
@@ -98,5 +96,5 @@ int find_straight(const char* str) {//" rOOO " -> r: return space
 			}
 		}
 	}
-	return 21;
+	return -1;
 }

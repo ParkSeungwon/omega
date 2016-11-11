@@ -1,5 +1,6 @@
 //should be compiled with gcc -x c option to force C compile (.C -> g++ default)
 #include<stdio.h>
+#include<time.h>
 #include<string.h>
 #include<stdlib.h>
 #include"queue.h"
@@ -29,35 +30,48 @@ void show() {
 
 char* crop() {
 	int minx=19, maxx=0, miny=19, maxy=0;
-	for(int y=0; y<20; y++) for(int x=0; x<20; x++) if(board[y][x] != ' ') {
-		minx = min(minx, x);
-		maxx = max(maxx, x);
-		miny = min(miny, y);
-		maxy = max(maxy, y);
+	int rx, ry;
+	for(int y=0; y<20; y++) for(int x=0; x<20; x++) {
+		if(board[y][x] == 'x' || board[y][x] == 'o') {
+			rx = x; ry = y;
+		} else if(board[y][x] != ' ') {
+			minx = min(minx, x);
+			maxx = max(maxx, x);
+			miny = min(miny, y);
+			maxy = max(maxy, y);
+		}
 	}
 	int w = maxx - minx + 1;
 	int h = maxy - miny + 1;
-	char *r = (char*)malloc(w * h + 2);
+	char *r = (char*)malloc(w * h + 4);
 	r[0] = w; r[1] = h;
 	int n = 2;
 	for(int y=miny; y<=maxy; y++) for(int x=minx; x<=maxx; x++) r[n++] = board[y][x];
+	r[n++] = rx - minx; 
+	r[n++] = ry - miny;
 	return r;
 }
 
-
+	
 int main() {
+	srand(time(NULL));
 	init();
 	qinit(&queue);
-	board[0][5] = 'X';
-	board[1][4] = 'X';
-	board[5][12] = 'O';
-	board[17][19] = 'O';
-	board[18][18] = 'O';
+	board[10][10] = 'X';
 	show();
 	char *p = crop();
 	printf("%d X %d : ", p[0], p[1]);
-	for(int i=2; i<p[0]*p[1]+2; i++) printf("%c", p[i]);
+	int i;
+	for(i=2; i<p[0]*p[1]+2; i++) printf("%c", p[i]);
+	printf("%d X %d : ", p[i++], p[i++]);
 	printf("\n");
 	printf("%d", find_straight("OOs"));
+	show();
+	int place; 
+	for(int i=0; i<60; i++) {
+		Oai();
+		Xai();
+	}
+	show();
 	free(p);
 }
