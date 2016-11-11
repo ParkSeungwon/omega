@@ -4,9 +4,9 @@
 #include<string.h>
 #include<stdlib.h>
 #include"queue.h"
-
+int Xai(); 
+int Oai();
 char board[20][20];
-Queue queue;
 
 void init() {
 	for(int y=0; y<20; y++) for(int x=0; x<20; x++) board[y][x] = ' ';
@@ -56,7 +56,6 @@ char* crop() {
 int main() {
 	srand(time(NULL));
 	init();
-	qinit(&queue);
 	board[10][10] = 'X';
 	show();
 	char *p = crop();
@@ -68,9 +67,21 @@ int main() {
 	printf("%d", find_straight("OOs"));
 	show();
 	int place; 
-	for(int i=0; i<60; i++) {
-		Oai();
-		Xai();
+	for(int i=0; i<90; i++) {
+		int xy = Oai();
+		if(xy != -1) {
+			board[xy%100][xy/100] = 'o';
+			show();
+			printf("O win\n");
+			break;
+		}
+		xy = Xai();
+		if(xy != -1) {
+			board[xy%100][xy/100] = 'x';
+			show();
+			printf("X win\n");
+			break;
+		}
 	}
 	show();
 	free(p);

@@ -38,7 +38,7 @@ void put(int n, char ox) {
 	}
 }
 
-void Oai() {
+int Oai() {
 	int xy, i;
 	for(i=0; i<20; i++) {
 		xy = find_straight(win_string[i]);
@@ -47,20 +47,21 @@ void Oai() {
 			break;
 		}
 	}
-	if(i<5) printf("O win");
+	if(i<5) return xy;
 	if(xy == -1) put(rand() % check(), 'O');
+	return -1;
 }
 
-void Xai() {
+int Xai() {
 	int xy, i;
 	for(i=9; i>=0; i--) {
 		xy = find_straight(win_string[i]);
 		if(xy != -1) {
-			board[xy%100][xy/100] = 'O';
+			board[xy%100][xy/100] = 'X';
 			break;
 		}
 	}
-	if(i>4) printf("X win");
+	if(i>4) return xy;
 	for(i=19; i>=10; i--) {
 		xy = find_straight(win_string[i]);
 		if(xy != -1) {
@@ -69,5 +70,6 @@ void Xai() {
 		}
 	}
 	if(xy == -1) put(rand() % check(), 'X');
+	return -1;
 }
 
