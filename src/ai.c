@@ -15,14 +15,20 @@ static const char *win_string[] = {
 char* Ogibo[200];//static or ={}선언시 실행시 크래시 ???
 char* Xgibo[200];
 
-void finish(char* g[], char win) {
-	for(int i=0; g[i]; i++) {
-		if(win == 'W') {
-		} else {
-		}
-		free(g[i]);
-		g[i] = NULL;
+void Owin() {
+	for(int i=0; Ogibo[i]; i++) {
+		//save
+		free(Ogibo[i]);
+		Ogibo[i] = NULL;
 	}
+	for(int i=0; Xgibo[i]; i++) {
+		//save here
+		free(Xgibo[i]);
+		Xgibo[i] = NULL;
+	}
+}
+void Xwin() {
+	Owin();//temporary
 }
 
 int check() {//2칸 이내에 v마크를 하고 v마크의 개수를 리턴
@@ -61,8 +67,7 @@ int Oai() {
 		}
 	}
 	if(i<5) {
-		finish(Ogibo, 'W');
-		finish(Xgibo, 'L');
+		Owin();
 		return xy;// 이 위로는 필연적인 룰에 따라 
 	}
 	i = 0;//reuse
@@ -87,8 +92,7 @@ int Xai() {
 		}
 	}
 	if(i>4) {
-		finish(Xgibo, 'W');
-		finish(Ogibo, 'L');
+		Xwin();
 		return xy;
 	}
 	for(i=19; i>=10; i--) {
