@@ -88,8 +88,6 @@ int main() {
 	show();
 	decompress(co);
 	show();
-	int pl = check();
-	printf("%d\n", pl);
 	free(p);
 	free(co);
 }
