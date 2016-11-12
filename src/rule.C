@@ -69,16 +69,16 @@ int main() {
 	int place; 
 	for(int i=0; i<90; i++) {
 		int xy = Oai();
+		show();
 		if(xy != -1) {
 	//		board[xy%100][xy/100] = 'o';
-			show();
 			printf("O win\n");
 			break;
 		}
 		xy = Xai();
+		show();
 		if(xy != -1) {
 	//		board[xy%100][xy/100] = 'x';
-			show();
 			printf("X win\n");
 			break;
 		}
@@ -91,4 +91,5 @@ int main() {
 	int pl = check();
 	printf("%d\n", pl);
 	free(p);
+	free(co);
 }

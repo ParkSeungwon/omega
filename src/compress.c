@@ -2,16 +2,16 @@
 #include<stdlib.h>
 extern char board[20][20];
 	
-char* compress() {
+char* compress() {//현재의 보드를 압축
 	int n = 0, i = 0;
 	char b[400];
 	for(int y=0; y<20; y++) for(int x=0; x<20; x++) {
 		n++;
-		if(n == 128) {
+		if(n == 128) {//128개의 space가 연달아 올경우 0을 집어넣는다.
 			b[i++] = 0;
 			n = 0;
 		}
-		if(board[y][x] == 'O') {
+		if(board[y][x] == 'O') {//그 전의 O또는 X에서의 거리만큼 값으로 
 			b[i++] = n;
 			n = 0;
 		} else if(board[y][x] == 'X') {
@@ -24,10 +24,10 @@ char* compress() {
 	r[1] = i%100;
 	for(int j=2; j<i+2; j++) r[j] = b[j-2];
 	for(int j=0; j<i+2; j++) printf("%d ", r[j]);
-	return r;
+	return r;//첫두바이트는 사이즈, 다음부터 데이터
 }
 
-void decompress(char* data) {
+void decompress(char* data) {//압축된 데이터를 바둑판에 다시 편다. 
 	int sz = data[0] * 100 + data[1];
 	int n = 0, i = 2;
 
