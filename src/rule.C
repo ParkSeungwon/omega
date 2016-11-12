@@ -9,6 +9,7 @@ int Oai();
 char* compress();
 void decompress(char*);
 char board[20][20];
+struct Tree;
 
 void init() {
 	for(int y=0; y<20; y++) for(int x=0; x<20; x++) board[y][x] = ' ';
@@ -89,5 +90,8 @@ int main() {
 	decompress(co);
 	show();
 	free(p);
+	struct Tree* tree = NULL;
+	tree = tinsert(tree, co, 1);
+	free_tree(tree);
 	free(co);
 }
