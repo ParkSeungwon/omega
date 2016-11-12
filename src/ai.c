@@ -12,8 +12,8 @@ static const char *win_string[] = {
 	" sOOO ", " OsOO ", " OOsO ", " OOOs ", "O OsO O",//결정적 
 	" sXXX ", " XsXX ", " XXsX ", " XXXs ", "X XsX X"
 };
-static char* Ogibo[200] = {};
-static char* Xgibo[200] = {};
+char* Ogibo[200];//static or ={}선언시 실행시 크래시 ???
+char* Xgibo[200];
 
 void finish(char* g[], char win) {
 	for(int i=0; g[i]; i++) {
