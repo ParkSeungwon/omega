@@ -6,10 +6,13 @@
 #include"queue.h"
 int Xai(); 
 int Oai();
+char* compress();
+void decompress(char*);
 char board[20][20];
 
 void init() {
 	for(int y=0; y<20; y++) for(int x=0; x<20; x++) board[y][x] = ' ';
+	board[10][10] = 'X';
 }
 
 void show() {
@@ -28,7 +31,7 @@ void show() {
 	printf("\n");
 }
 
-char* crop() {
+char* crop() {//not use for simplicity
 	int minx=19, maxx=0, miny=19, maxy=0;
 	int rx, ry;
 	for(int y=0; y<20; y++) for(int x=0; x<20; x++) {
@@ -56,8 +59,6 @@ char* crop() {
 int main() {
 	srand(time(NULL));
 	init();
-	board[10][10] = 'X';
-	show();
 	char *p = crop();
 	printf("%d X %d : ", p[0], p[1]);
 	int i;
@@ -65,24 +66,29 @@ int main() {
 	printf("%d X %d : ", p[i++], p[i++]);
 	printf("\n");
 	printf("%d", find_straight("OOs"));
-	show();
 	int place; 
 	for(int i=0; i<90; i++) {
 		int xy = Oai();
 		if(xy != -1) {
-			board[xy%100][xy/100] = 'o';
+	//		board[xy%100][xy/100] = 'o';
 			show();
 			printf("O win\n");
 			break;
 		}
 		xy = Xai();
 		if(xy != -1) {
-			board[xy%100][xy/100] = 'x';
+	//		board[xy%100][xy/100] = 'x';
 			show();
 			printf("X win\n");
 			break;
 		}
 	}
+	char *co = compress();
+	init();
 	show();
+	decompress(co);
+	show();
+	int pl = check();
+	printf("%d\n", pl);
 	free(p);
 }

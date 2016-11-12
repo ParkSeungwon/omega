@@ -5,14 +5,14 @@
 
 int find_straight(const char* s);
 extern char board[20][20];
-const char *win_string[] = {
-	"sOOOO", "OsOOO", "OOsOO", "OOOsO", "OOOOs",
+static const char *win_string[] = {
+	"sOOOO", "OsOOO", "OOsOO", "OOOsO", "OOOOs",//승리O
 	"sXXXX", "XsXXX", "XXsXX", "XXXsX", "XXXXs",
-	" sOOO ", " OsOO ", " OOsO ", " OOOs ", "O OsO O",
+	" sOOO ", " OsOO ", " OOsO ", " OOOs ", "O OsO O",//결정적 
 	" sXXX ", " XsXX ", " XXsX ", " XXXs ", "X XsX X"
 };
 
-int check() {
+int check() {//2칸 이내에 v마크를 하고 v마크의 개수를 리턴
 	int r = 0;
 	for(int y=0; y<20; y++) for(int x=0; x<20; x++) {
 		if(board[y][x] == 'O' || board[y][x] == 'X') {
@@ -27,7 +27,7 @@ int check() {
 	return r;
 }
 
-void put(int n, char ox) {
+void put(int n, char ox) {//v마크를 지우고 n번째 v마크에 바둑돌을 둔다.
 	int i = 0;
 	for(int y=0; y<20; y++) for(int x=0; x<20; x++) {
 		if(board[y][x] == 'v') {

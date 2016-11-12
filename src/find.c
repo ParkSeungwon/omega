@@ -1,7 +1,7 @@
 #include<string.h>
 #include"queue.h"
 extern char board[20][20];
-Queue queue;
+static Queue queue;
 
 int find_straight(const char* str) {//" sOOO " -> s : return space
 	char st[10] = {};
