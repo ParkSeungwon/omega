@@ -1,10 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+#define HEADER_SIZE 6
 typedef char element;
 typedef struct Tree {
 	element* data;
-	int vcount;
 	unsigned int* result;
 	struct Tree *left, *right;
 } Tree;
@@ -12,14 +11,9 @@ typedef struct Tree {
 Tree* tinsert(Tree* p, element* data, int win) {//win 1 lose 0
 	if(!p) {
 		p = (Tree*)malloc(sizeof(Tree));
-		p->data = data;
-		char* c = compress();
-		init();
-		decompress(data);
-		p->result = (unsigned*)calloc(2 * sizeof(unsigned), p->vcount = check());
-		init();
-		decompress(c);
-		free(c);
+		p->data = (char*)malloc(data[0] *100 + data[1] + HEADER_SIZE);
+		strcpy(p->data, data);
+		p->result = (unsigned*)calloc(2 * sizeof(unsigned), data[4]*100 + data[5]);
 		p->result[2*(data[2] * 100 + data[3]) + win]++;
 		p->left = NULL;
 		p->right = NULL;
@@ -37,5 +31,6 @@ void free_tree(Tree* p) {
 	if(p->left) free_tree(p->left);
 	if(p->right) free_tree(p->right);
 	free(p->result);
+	free(p->data);
 	free(p);
 }

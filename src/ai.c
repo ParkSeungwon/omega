@@ -89,9 +89,7 @@ int Oai() {
 		return xy;// 이 위로는 필연적인 룰에 따라 
 	}
 	i = 0;//reuse
-	if(xy == -1) {//이 아래는 랜덤으로 고르는 부분
-		put(record(Ogibo), 'O');
-	}
+	if(xy == -1) put(record(Ogibo), 'O');//랜덤으로 고르는 부분
 	return -1;
 }
 
@@ -116,9 +114,7 @@ int Xai() {
 		}
 	}//이 위로는 필연적인 룰에 따라 고르는 부분
 	i = 0;
-	if(xy == -1) {//이 아래는 랜덤으로 고르는 부분
-		put(record(Xgibo), 'X');
-	}
+	if(xy == -1) put(record(Xgibo), 'X');//랜덤으로 고르는 부분
 	return -1;
 }
 

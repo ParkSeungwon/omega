@@ -28,8 +28,8 @@ char* compress() {//현재의 보드를 압축
 }
 
 void decompress(char* data) {//압축된 데이터를 바둑판에 다시 편다. 
-	int sz = (data[0] << 2) | ((data[1] & (3 << 6)) >> 6);
-	int n = 0, i = 4;
+	int sz = data[0] *100 + data[1];
+	int n = 0, i = HEADER_SIZE;
 
 	for(int y=0; y<20; y++) for(int x=0; x<20; x++) {
 		n++;
