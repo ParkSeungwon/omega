@@ -90,8 +90,7 @@ int main() {
 	decompress(co);
 	show();
 	free(p);
-	struct Tree* tree = NULL;
-	tree = tinsert(tree, co, 1);
+	extern struct Tree* tree;
 	free_tree(tree);
 	free(co);
 }

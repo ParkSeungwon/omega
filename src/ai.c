@@ -6,6 +6,7 @@
 int find_straight(const char* s);
 char* compress();
 extern char board[20][20];
+
 static const char *win_string[] = {
 	"sOOOO", "OsOOO", "OOsOO", "OOOsO", "OOOOs",//승리O
 	"sXXXX", "XsXXX", "XXsXX", "XXXsX", "XXXXs",
@@ -14,21 +15,38 @@ static const char *win_string[] = {
 };
 char* Ogibo[200];//static or ={}선언시 실행시 크래시 ???
 char* Xgibo[200];
+static int round = 0;
+struct Tree* tree = NULL;
 
 void Owin() {
 	for(int i=0; Ogibo[i]; i++) {
 		//save
+		tree = tinsert(tree, Ogibo[i], 1);
 		free(Ogibo[i]);
 		Ogibo[i] = NULL;
 	}
 	for(int i=0; Xgibo[i]; i++) {
-		//save here
+		tree = tinsert(tree, Xgibo[i], 0);
 		free(Xgibo[i]);
 		Xgibo[i] = NULL;
 	}
 }
+
 void Xwin() {
-	Owin();//temporary
+	Owin();
+}
+
+int record(char* gibo[]) {
+	int i=0;
+	while(gibo[i]) i++;
+	gibo[i] = compress();//현 상태의 기보를 저장.
+	int count_v = check();
+	int v = rand() % count_v;//두 칸 내에서 랜덤으로 고른후
+	gibo[i][2] = v / 100;//랜덤 값을 저장한다.
+	gibo[i][3] = v % 100;
+	gibo[i][4] = count_v / 100;
+	gibo[i][5] = count_v % 100;
+	return v;
 }
 
 int check() {//2칸 이내에 v마크를 하고 v마크의 개수를 리턴
@@ -72,12 +90,7 @@ int Oai() {
 	}
 	i = 0;//reuse
 	if(xy == -1) {//이 아래는 랜덤으로 고르는 부분
-		while(Ogibo[i]) i++;
-		Ogibo[i] = compress();//현 상태의 기보를 저장.
-		int v = rand() % check();//두 칸 내에서 랜덤으로 고른후
-		Ogibo[i][2] = v /100;//랜덤 값을 저장한다.
-		Ogibo[i][3] = v % 100;
-		put(v, 'O');
+		put(record(Ogibo), 'O');
 	}
 	return -1;
 }
@@ -104,12 +117,7 @@ int Xai() {
 	}//이 위로는 필연적인 룰에 따라 고르는 부분
 	i = 0;
 	if(xy == -1) {//이 아래는 랜덤으로 고르는 부분
-		while(Xgibo[i]) i++;
-		Xgibo[i] = compress();
-		int v = rand() % check();//두 칸 내에서 랜덤으로 고른후
-		Xgibo[i][2] = v /100;//랜덤 값을 저장한다.
-		Xgibo[i][3] = v % 100;
-		put(v, 'X');
+		put(record(Xgibo), 'X');
 	}
 	return -1;
 }
