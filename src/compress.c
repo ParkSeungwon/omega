@@ -21,9 +21,9 @@ char* compress() {//현재의 보드를 압축
 		}
 	}
 	char *r = (char*)malloc(i+ HEADER_SIZE);
+	for(int j=0; j<i; j++) r[j+HEADER_SIZE] = b[j];
 	r[0] = i /100;
 	r[1] = i %100;
-	for(int j=0; j<i; j++) r[j+HEADER_SIZE] = b[j];
 	return r;//첫두바이트는 사이즈, 다음 두바이트는 공란(nth v)다음 2vcount 다음부터 데이터
 }
 

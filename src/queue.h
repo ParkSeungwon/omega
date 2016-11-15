@@ -1,6 +1,4 @@
 #define MAX 10
-#define min(a,b) ((a)<(b) ? (a) : (b))
-#define max(a,b) ((a)>(b) ? (a) : (b))
 
 typedef char element;
 typedef struct Queue {
