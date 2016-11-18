@@ -52,6 +52,15 @@ int main(int c, char** v) {
 //	decompress(co);
 //	show();
 	tshow(hash[3]);
-	for(int i=0; i<400; i++) if(hash[i]) tfree(hash[i]);
+	tshow(hash[4]);
+	for(int i=0; i<400; i++) if(hash[i]) {
+		char b[10];
+		snprintf(b, 10, "%d", i);
+		strcat(b, ".dat");
+		FILE* f = fopen(b, "w");
+		tsave(hash[i], f);
+		fclose(f);
+		tfree(hash[i]);
+	}
 //	free(co);
 }

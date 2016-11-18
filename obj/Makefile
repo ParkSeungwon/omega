@@ -5,6 +5,6 @@ EXE = $(patsubst %.x, ../%.x, $(wildcard *.x))
 all : $(EXE)
 
 ../%.x : %.x $(OBJ)
-	$(CC) -o $@ $< $(OBJ) 
+	$(CC) -o $@ $< $(OBJ)
 
 
