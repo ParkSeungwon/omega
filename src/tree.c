@@ -46,7 +46,7 @@ void tfree(Tree* p) {
 void tshow(Tree* p) {
 	if(p) {
 		printf("\nBoard : \n");
-		for(int i=0; i<p->data[0]*100 + p->data[1] + 6; i++) 
+		for(int i=0; i<p->data[0]*100 + p->data[1] + HEADER_SIZE; i++) 
 			printf("%d,", p->data[i]);
 		printf("\nLose, Win\n");
 		for(int i=0; i < 2*(p->data[4]*100 + p->data[5]); i++) 

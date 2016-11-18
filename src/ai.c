@@ -24,16 +24,20 @@ static const char *win_string[] = {
 };
 char* Ogibo[200];//static or ={}선언시 실행시 크래시 ???
 char* Xgibo[200];
+Tree* hash[400];
 
 void win(char ox) {
+	int sz;
 	for(int i=0; Ogibo[i]; i++) {
 		//save
-		tree = tinsert(tree, Ogibo[i], ox == 'O');
+		sz = Ogibo[i][0] * 100 + Ogibo[i][1];
+		hash[sz] = tinsert(hash[sz], Ogibo[i], ox == 'O');
 		free(Ogibo[i]);
 		Ogibo[i] = NULL;
 	}
 	for(int i=0; Xgibo[i]; i++) {
-		tree = tinsert(tree, Xgibo[i], ox == 'X');
+		sz = Xgibo[i][0] * 100 + Xgibo[i][1];
+		hash[sz] = tinsert(hash[sz], Xgibo[i], ox == 'X');
 		free(Xgibo[i]);
 		Xgibo[i] = NULL;
 	}
