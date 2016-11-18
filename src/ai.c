@@ -9,7 +9,7 @@ typedef struct Tree {
 	struct Tree *left, *right;
 } Tree;
 int find_straight(const char* s);
-void free_tree(Tree*);
+void tfree(Tree*);
 Tree* tinsert(Tree* p, element* data, int win);
 char* compress();
 

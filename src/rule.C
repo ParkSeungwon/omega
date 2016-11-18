@@ -39,7 +39,7 @@ int main() {
 	show();
 	decompress(co);
 	show();
-	show_tree(tree);
-	free_tree(tree);
+	tshow(tree);
+	tfree(tree);
 	free(co);
 }

@@ -6,8 +6,15 @@ typedef struct Tree {
 	struct Tree *left, *right;
 } Tree;
 typedef char element;
+extern char board[20][20];
+
 int main() {
 	Tree* t= NULL;
-	t= tinsert(t, "\0\nabslfjafjfafafadfafafafafqerwrrqrqwecfafqwef", 1);
-	show_tree(t);
+	init();
+	char* data = compress();
+	for(int i=0; i < data[0]*100 + data[1] + 6; i++) printf("%d,", data[i]);
+	printf("\n");
+	t = tinsert(t, data, 1);
+	tshow(t);
+	tfree(t);
 }

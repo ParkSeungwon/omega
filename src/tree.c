@@ -10,10 +10,11 @@ typedef struct Tree {
 } Tree;
 
 Tree* tinsert(Tree* p, element* data, int win) {//win 1 lose 0
+	int sz = data[0] * 100 + data[1] + HEADER_SIZE;
 	if(!p) {
 		p = (Tree*)malloc(sizeof(Tree));
-		p->data = (char*)malloc(data[0] *100 + data[1] + HEADER_SIZE);
-		strcpy(p->data, data);
+		p->data = (char*)malloc(sz);
+		for(int i=0; i<sz; i++) p->data[i] = data[i];
 		p->result = (unsigned*)calloc(2 * sizeof(unsigned), data[4]*100 + data[5]);
 		p->result[2*(data[2] * 100 + data[3]) + win]++;
 		p->left = NULL;
@@ -21,7 +22,7 @@ Tree* tinsert(Tree* p, element* data, int win) {//win 1 lose 0
 		return p;
 	}
 	int equal = 1;
-	for(int i=HEADER_SIZE; equal && i < p->data[0] * 100 + p->data[1] + HEADER_SIZE; i++) {
+	for(int i=HEADER_SIZE; equal && i < sz; i++) {
 		if(p->data[i] > data[i]) {
 			p->left = tinsert(p->left, data, win);
 			equal = 0;
@@ -34,21 +35,23 @@ Tree* tinsert(Tree* p, element* data, int win) {//win 1 lose 0
 	return p;
 }
 
-void free_tree(Tree* p) {
-	if(p->left) free_tree(p->left);
-	if(p->right) free_tree(p->right);
+void tfree(Tree* p) {
+	if(p->left) tfree(p->left);
+	if(p->right) tfree(p->right);
 	free(p->result);
 	free(p->data);
 	free(p);
 }
 
-void show_tree(Tree* p) {
+void tshow(Tree* p) {
 	if(p) {
+		printf("\nBoard : \n");
 		for(int i=0; i<p->data[0]*100 + p->data[1] + 6; i++) 
 			printf("%d,", p->data[i]);
+		printf("\nLose, Win\n");
 		for(int i=0; i < 2*(p->data[4]*100 + p->data[5]); i++) 
-			printf("%d,", p->result[0]);
-		show_tree(p->left);
-		show_tree(p->right);
+			printf("%d,", p->result[i]);
+		tshow(p->left);
+		tshow(p->right);
 	} 
 }

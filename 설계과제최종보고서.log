@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.7.8)  15 NOV 2016 19:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.7.8)  15 NOV 2016 19:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**설계과제수행계획서.tex
-(./설계과제수행계획서.tex
+**설계과제최종보고서.tex
+(./설계과제최종보고서.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
@@ -1064,8 +1064,41 @@ Package: konames-utf 2015/07/06 v1.7 UTF-8 Hangul captions
 \dhucs@emph@width=\dimen174
 \useremphraisedim=\dimen175
 )))
-(./설계과제수행계획서.aux)
-\openout1 = `설계과제수행계획서.aux'.
+(/usr/share/texlive/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count134
+\rotFPtop=\skip46
+\rotFPbot=\skip47
+\rot@float@box=\box41
+\rot@mess@toks=\toks41
+)
+(/usr/share/texlive/texmf-dist/tex/generic/dirtree/dirtree.sty
+Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
+
+(/usr/share/texlive/texmf-dist/tex/generic/dirtree/dirtree.tex
+`dirtree' v0.32, 2012/12/11 (jcc)
+\DT@offset=\dimen176
+\DT@width=\dimen177
+\DT@sep=\dimen178
+\DT@all=\dimen179
+\DT@rulewidth=\dimen180
+\DT@dotwidth=\dimen181
+\DTbaselineskip=\dimen182
+\DT@counti=\count135
+\DT@countii=\count136
+\DT@countiii=\count137
+\DT@countiv=\count138
+\DT@indent=\dimen183
+\DT@parskip=\dimen184
+\DT@baselineskip=\dimen185
+)
+File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
+) (./설계과제최종보고서.aux)
+\openout1 = `설계과제최종보고서.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
@@ -1140,17 +1173,17 @@ LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count134
-\scratchdimen=\dimen176
-\scratchbox=\box41
-\nofMPsegments=\count135
-\nofMParguments=\count136
-\everyMPshowfont=\toks41
-\MPscratchCnt=\count137
-\MPscratchDim=\dimen177
-\MPnumerator=\count138
-\makeMPintoPDFobject=\count139
-\everyMPtoPDFconversion=\toks42
+\scratchcounter=\count139
+\scratchdimen=\dimen186
+\scratchbox=\box42
+\nofMPsegments=\count140
+\nofMParguments=\count141
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count142
+\MPscratchDim=\dimen187
+\MPnumerator=\count143
+\makeMPintoPDFobject=\count144
+\everyMPtoPDFconversion=\toks43
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -1190,41 +1223,34 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@mv@tabular=\count140
-\c@mv@boldtabular=\count141
-\c@lstlisting=\count142
+\c@mv@tabular=\count145
+\c@mv@boldtabular=\count146
+\c@lstlisting=\count147
 
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box42
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-)
+\AtBeginShipoutBox=\box43
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 48.
+(Font)              scaled to size 20.74pt on input line 46.
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfornament/vectorian/vectorian84.pg
 f)
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 50.0pt on input line 48.
+(Font)              scaled to size 50.0pt on input line 46.
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfornament/vectorian/vectorian88.pg
 f)
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 48.
-LaTeX Font Info:    Try loading font information for U+msa on input line 48.
+(Font)              scaled to size 14.4pt on input line 46.
+LaTeX Font Info:    Try loading font information for U+msa on input line 46.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 48.
+LaTeX Font Info:    Try loading font information for U+msb on input line 46.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for LUC+uhcmj on input line 48
+LaTeX Font Info:    Try loading font information for LUC+uhcmj on input line 46
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/kotex-utf/lucuhcmj.fd
@@ -1233,102 +1259,117 @@ File: lucuhcmj.fd 2013/09/26 UHC Myeongjo font definitions
 <logo.jpg, id=4, 602.25pt x 187.70125pt>
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 48.
+Package pdftex.def Info: logo.jpg used on input line 46.
 (pdftex.def)             Requested size: 241.84843pt x 75.37703pt.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logo.jpg>]
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 53.
+(Font)              scaled to size 24.88pt on input line 51.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 24.88pt on input line 53.
+(Font)              scaled to size 24.88pt on input line 51.
 LaTeX Font Info:    Font shape `LUC/nanummj/b/n' in size <24.88> not available
 (Font)              Font shape `LUC/nanummj/bx/n' tried instead on input line 5
-3.
- (./설계과제수행계획서.toc
+1.
+ (./설계과제최종보고서.toc
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 1.
+(Font)              scaled to size 12.0pt on input line 7.
 LaTeX Font Info:    Font shape `LUC/nanummj/b/n' in size <12> not available
-(Font)              Font shape `LUC/nanummj/bx/n' tried instead on input line 1
+(Font)              Font shape `LUC/nanummj/bx/n' tried instead on input line 7
 .
 )
 \tf@toc=\write4
-\openout4 = `설계과제수행계획서.toc'.
+\openout4 = `설계과제최종보고서.toc'.
 
  [1
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+[2
+
+]
 제\nobreakspace {}1\nobreakspace {}장
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 65.
+(Font)              scaled to size 17.28pt on input line 63.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 65.
+(Font)              scaled to size 17.28pt on input line 63.
 LaTeX Font Info:    Font shape `LUC/nanummj/b/n' in size <17.28> not available
 (Font)              Font shape `LUC/nanummj/bx/n' tried instead on input line 6
-5.
-LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 75.
-LaTeX Font Info:    Font shape `LUC/nanummj/b/n' in size <14.4> not available
-(Font)              Font shape `LUC/nanummj/bx/n' tried instead on input line 7
-5.
+3.
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
- input line 77.
+ input line 65.
 (/usr/share/texlive/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.fd
 File: TS1LinuxLibertineT-TLF.fd 2012/11/26 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 77.
+(Font)              scaled to size 12.0pt on input line 65.
 
-[2
-
-] <b.png, id=71, 265.99374pt x 582.175pt>
-File: b.png Graphic file (type png)
- <use b.png>
-Package pdftex.def Info: b.png used on input line 91.
-(pdftex.def)             Requested size: 193.47578pt x 423.46518pt.
- [3 <./b.png>]
-제\nobreakspace {}2\nobreakspace {}장
-[4
+[3
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 125.
-
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+제\nobreakspace {}2\nobreakspace {}장
+LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 75.
+LaTeX Font Info:    Font shape `LUC/nanummj/b/n' in size <14.4> not available
+(Font)              Font shape `LUC/nanummj/bx/n' tried instead on input line 7
+5.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 99.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-(./src/compress.c
-LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <12> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 6.
 LaTeX Font Info:    Try loading font information for LUC+nanumgt on input line 
-6.
+99.
 
 (/usr/share/texlive/texmf-dist/tex/latex/nanumtype1/lucnanumgt.fd
 File: lucnanumgt.fd 2013/02/12 v0.1 Nanum Gothic font definitions
-)
-LaTeX Font Info:    Font shape `LUC/nanumgt/m/it' in size <12> not available
-(Font)              Font shape `LUC/nanumgt/m/sl' tried instead on input line 6
-.
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 15.
+) [4
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
-File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-) [5]) (./src/find.c
-[6] [7] [8]) (./src/ai.c [9] [10] [11]) [12]
+]
 제\nobreakspace {}3\nobreakspace {}장
-[13
+[5
 
-] (./설계과제수행계획서.aux) ) 
+]
+제\nobreakspace {}4\nobreakspace {}장
+[6
+
+] (./설계과제최종보고서.aux) ) 
 Here is how much of TeX's memory you used:
- 17683 strings out of 493029
- 326908 string characters out of 6136235
- 522510 words of memory out of 5000000
- 20662 multiletter control sequences out of 15000+600000
- 90692 words of font info for 257 fonts, out of 8000000 for 9000
+ 17441 strings out of 493029
+ 324920 string characters out of 6136235
+ 363914 words of memory out of 5000000
+ 20442 multiletter control sequences out of 15000+600000
+ 87250 words of font info for 251 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,13n,72p,494b,1708s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,13n,56p,494b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc
 /dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbt
 n_naooyc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_lu7m
@@ -1336,102 +1377,92 @@ n_naooyc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_lu7m
 }</usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmac.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmad.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmae.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/nanumtype1/nanumgtmb0.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/nanumtype1/nanumgtmb1.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/nanumtype1/nanumgtmb2.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/nanumtype1/nanumgtmb3.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/nanumtype1/nanumgtmb4.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/nanumtype1/nanumgtmb5.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/nanumtype1/nanumgtmb6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/nanumtype1/nanumgtmb7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/nanumtype1/nanumgtmb8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/nanumtype1/nanumgtmb9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/na
-numtype1/nanumgtmbc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanum
-type1/nanumgtmbd.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtyp
-e1/nanumgtmc0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/
-nanumgtmc1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nan
-umgtmc2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumg
-tmc5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc
-6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc7.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc8.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc9.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmcc.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmcd.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmce.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd0.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd1.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd2.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/nanumtype1/nanumgtmd3.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/nanumtype1/nanumgtmd5.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/nanumtype1/nanumgtmd6.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/nanumtype1/nanummjbac.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/nanumtype1/nanummjbad.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/nanumtype1/nanummjbb0.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/nanumtype1/nanummjbb4.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/nanumtype1/nanummjbb7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/nanumtype1/nanummjbb8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/nanumtype1/nanummjbb9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/n
-anumtype1/nanummjbba.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanu
-mtype1/nanummjbbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumty
-pe1/nanummjbbc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1
-/nanummjbc0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/na
-nummjbc1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanum
-mjbc2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjb
-c6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc7.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjbc8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjbcc.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd1.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd4.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd5.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd6.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/nanumtype1/nanummjmad.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/nanumtype1/nanummjmb1.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/nanumtype1/nanummjmb2.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/nanumtype1/nanummjmb3.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/nanumtype1/nanummjmb4.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/nanumtype1/nanummjmb5.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/nanumtype1/nanummjmb7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/nanumtype1/nanummjmb8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/nanumtype1/nanummjmb9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-nanumtype1/nanummjmba.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nan
-umtype1/nanummjmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumt
-ype1/nanummjmbc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype
-1/nanummjmbd.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/n
-anummjmbe.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanu
-mmjmc0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummj
-mc1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc2
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc4.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc6.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc7.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/nanumtype1/nanummjmce.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/nanumtype1/nanummjmcf.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/nanumtype1/nanummjmd0.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/nanumtype1/nanummjmd1.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/nanumtype1/nanummjmd2.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/nanumtype1/nanummjmd3.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/nanumtype1/nanummjmd4.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/nanumtype1/nanummjmd5.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/nanumtype1/nanummjmd6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/nanumtype1/nanummjmd7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/co
-urier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/uhc/umj/umj30.pfb>
-Output written on 설계과제수행계획서.pdf (14 pages, 3513659 bytes).
+hare/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmac.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmad.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb2.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb4.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb5.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/nanumtype1/nanumgtmb7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/nanumtype1/nanumgtmb8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/nanumtype1/nanumgtmb9.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/nanumtype1/nanumgtmba.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/nanumtype1/nanumgtmbc.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/nanumtype1/nanumgtmc0.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/nanumtype1/nanumgtmc1.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/nanumtype1/nanumgtmc2.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/nanumtype1/nanumgtmc5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/nanumtype1/nanumgtmc6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/na
+numtype1/nanumgtmc7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanum
+type1/nanumgtmc8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtyp
+e1/nanumgtmcc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/
+nanumgtmd0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nan
+umgtmd1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumg
+tmd2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd
+3.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd5.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd6.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjbac.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjbad.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjbae.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb0.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb2.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb3.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/nanumtype1/nanummjbb7.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/nanumtype1/nanummjbb8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/nanumtype1/nanummjbba.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/nanumtype1/nanummjbbc.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/nanumtype1/nanummjbbd.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/nanumtype1/nanummjbc1.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/nanumtype1/nanummjbc2.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/nanumtype1/nanummjbc5.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/nanumtype1/nanummjbc6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/nanumtype1/nanummjbc7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/nanumtype1/nanummjbc8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/n
+anumtype1/nanummjbc9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanu
+mtype1/nanummjbcc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumty
+pe1/nanummjbd0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1
+/nanummjbd1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/na
+nummjbd2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanum
+mjbd3.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjb
+d4.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjbd5.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmad.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb1.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/nanumtype1/nanummjmb8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/nanumtype1/nanummjmba.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/nanumtype1/nanummjmbb.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/nanumtype1/nanummjmbc.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/nanumtype1/nanummjmbd.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/nanumtype1/nanummjmc0.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/nanumtype1/nanummjmc1.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/nanumtype1/nanummjmc2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+nanumtype1/nanummjmc5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nan
+umtype1/nanummjmc6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumt
+ype1/nanummjmc7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype
+1/nanummjmc8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/n
+anummjmc9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanu
+mmjmcc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummj
+mcd.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmce
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcf.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd0.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd1.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd2.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd3.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd4.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/uhc/umj/umj30.pfb>
+Output written on 설계과제최종보고서.pdf (7 pages, 3134898 bytes).
 PDF statistics:
- 462 PDF objects out of 1000 (max. 8388607)
- 340 compressed objects within 4 object streams
+ 392 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
