@@ -29,11 +29,11 @@ int main(int c, char** v)
     DIR *dp;
     struct dirent *dirp;
     dp  = opendir(".");
-    while ((dirp = readdir(dp)) != NULL) {
+    while (dirp = readdir(dp)) {
 		int file_num;
         if(file_num = is_dat(dirp->d_name)) {
 			FILE* f = fopen(dirp->d_name, "r");
-			printf("opening %s\n", dirp->d_name);
+		//	printf("opening %s\n", dirp->d_name);
 			hash[file_num] = tload(hash[file_num], f);
 			fclose(f);
 		}
@@ -43,7 +43,8 @@ int main(int c, char** v)
 
 	srand(time(NULL));
 	int game = atoi(v[1]);
-	while(game) {
+	while(game--) {
+		printf("game %d\n", game);
 		init();
 		for(int i=0; i<200; i++) {
 			int xy = Oai();
@@ -59,10 +60,9 @@ int main(int c, char** v)
 				break;
 			}
 		}
-		game--;
-		printf("game %d\n", game);
+		show();
 	}
-	show();
+
 	for(int i=0; i<400; i++) if(hash[i]) {
 		char b[10];
 		snprintf(b, 10, "%d", i);

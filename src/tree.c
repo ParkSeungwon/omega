@@ -102,25 +102,26 @@ Tree* tload(Tree* p, FILE* fp) {
 	Tree tree;
 	int a, b, c, d, e, f;
 	while(EOF != fscanf(fp, "%d %d %d %d %d %d", &a, &b, &c, &d, &e, &f)) {
-		tree.data = (Tree*)malloc(a * 100 + b + HEADER_SIZE);
-		tree.result = (Tree*)calloc(e * 100 + f, 2 * sizeof(unsigned));
-		tree.data[0] = a;
-		tree.data[1] = b;
-		tree.data[2] = c;
-		tree.data[3] = d;
-		tree.data[4] = e;
-		tree.data[5] = f;
+		char *data = (Tree*)malloc(a * 100 + b + HEADER_SIZE);
+		unsigned *result = (Tree*)calloc(e * 100 + f, 2 * sizeof(unsigned));
+		data[0] = a;
+		data[1] = b;
+		data[2] = c;
+		data[3] = d;
+		data[4] = e;
+		data[5] = f;
 		for(int i=0; i<a*100+b; i++) {
 			fscanf(fp, "%d", &c);
-			tree.data[i+HEADER_SIZE] = c;
+			data[i+HEADER_SIZE] = c;
 		}
 		for(int i=0; i<2*(e*100+f); i++) {
 			fscanf(fp, "%d", &c);
-			tree.result[i] = c;
+			result[i] = c;
 		}
-		tree.left = NULL;
-		tree.right = NULL;
 
-		return tadd(p, tree.data, tree.result);
+		p = tadd(p, data, result);
+		free(data);
+		free(result);
 	}
+	return p;
 }
