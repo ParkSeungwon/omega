@@ -121,6 +121,6 @@ Tree* tload(Tree* p, FILE* fp) {
 		tree.left = NULL;
 		tree.right = NULL;
 
-		tadd(p, tree.data, tree.result);
+		return tadd(p, tree.data, tree.result);
 	}
 }

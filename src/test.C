@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<dirent.h>
 typedef char element;
 typedef struct Tree {
 	element* data;
@@ -9,12 +10,18 @@ typedef char element;
 extern char board[20][20];
 
 int main() {
-	Tree* t= NULL;
-	init();
-	char* data = compress();
-	for(int i=0; i < data[0]*100 + data[1] + 6; i++) printf("%d,", data[i]);
-	printf("\n");
-	t = tinsert(t, data, 1);
-	tshow(t);
-	tfree(t);
+    DIR *dp;
+    struct dirent *dirp;
+    dp  = opendir(".");
+    while ((dirp = readdir(dp)) != NULL) {
+		int file_num;
+		printf("read %s\n", dirp->d_name);
+
+        if(file_num = is_dat(dirp->d_name)) {
+			FILE* f = fopen(dirp->d_name, "r");
+			printf("opening %s\n", dirp->d_name);
+			fclose(f);
+		}
+    }
+    closedir(dp);
 }

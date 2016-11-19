@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 #include<stdlib.h>
 #define min(a,b) ((a)<(b) ? (a) : (b))
 #define max(a,b) ((a)>(b) ? (a) : (b))
@@ -23,6 +24,15 @@ void show() {
 	for(int i=0; i<10; i++) printf("%d", i);
 	for(int i=0; i<10; i++) printf("%d", i);
 	printf("\n");
+}
+
+int is_dat(const char* f) {//.dat파일이면 앞부분을 숫자로 변환해 리턴한다. 아니면 0
+	char b[30];
+	strcpy(b, f);
+	int i;
+	for(i=0; b[i]; i++);
+	b[i-4] = '\0';
+	return strcmp(&b[i-3], "dat") ? 0 : atoi(b);
 }
 
 char* crop() {//not use for simplicity

@@ -3,6 +3,7 @@
 #include<time.h>
 #include<string.h>
 #include<stdlib.h>
+#include<dirent.h>
 #include"queue.h"
 int Xai(); 
 int Oai();
@@ -17,28 +18,43 @@ typedef struct Tree {
 extern struct Tree* tree;
 extern Tree* hash[400];
 
-int main(int c, char** v) {
-	tree = NULL;
+int main(int c, char** v)
+{
+	if(c < 2) {
+		printf("usage : %s [times]", v[0]);
+		return 0;
+	}
+
+
+    DIR *dp;
+    struct dirent *dirp;
+    dp  = opendir(".");
+    while ((dirp = readdir(dp)) != NULL) {
+		int file_num;
+        if(file_num = is_dat(dirp->d_name)) {
+			FILE* f = fopen(dirp->d_name, "r");
+			printf("opening %s\n", dirp->d_name);
+			hash[file_num] = tload(hash[file_num], f);
+			fclose(f);
+		}
+    }
+    closedir(dp);
+
+
 	srand(time(NULL));
-	init();
-	int i;
-	printf("%d", find_straight("OOs"));
-	int place; 
 	int game = atoi(v[1]);
 	while(game) {
 		init();
 		for(int i=0; i<200; i++) {
 			int xy = Oai();
-			show();
+		//	show();
 			if(xy != -1) {
-				//		board[xy%100][xy/100] = 'o';
 				printf("O win\n");
 				break;
 			}
 			xy = Xai();
-			show();
+		//	show();
 			if(xy != -1) {
-				//		board[xy%100][xy/100] = 'x';
 				printf("X win\n");
 				break;
 			}
@@ -46,13 +62,7 @@ int main(int c, char** v) {
 		game--;
 		printf("game %d\n", game);
 	}
-//	char *co = compress();
-//	init();
-//	show();
-//	decompress(co);
-//	show();
-	tshow(hash[3]);
-	tshow(hash[4]);
+	show();
 	for(int i=0; i<400; i++) if(hash[i]) {
 		char b[10];
 		snprintf(b, 10, "%d", i);
@@ -62,5 +72,4 @@ int main(int c, char** v) {
 		fclose(f);
 		tfree(hash[i]);
 	}
-//	free(co);
 }
