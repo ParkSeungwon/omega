@@ -125,13 +125,13 @@ int OH() {
 		Tree* p = tfind(hash[sz], data);
 		int sum = 0, max = 0;
 		if(p) for(int i=0; i<rsz; i++) sum += p->result[i];
-		if(sum < 100 || !p) for(int i=0; i<rsz/2; i++) {
-			for(int j=0; j<10; j++) {
+		if(sum < 100 || !p) {
+			for(int j=0; j<100; j++) {
 				init();
 				decompress(data);
-				check();
-				put(i, 'O');
-				pre_cog('X');//simulate
+			//	check();
+			//	put(i, 'O');
+				pre_cog('O');//simulate
 			}
 		}
 		init();
