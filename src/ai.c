@@ -116,15 +116,54 @@ int Xai() {
 		win('X');
 		return xy;
 	}
-	for(i=19; i>=10; i--) {
-		xy = find_straight(win_string[i]);
-		if(xy != -1) {
-			board[xy%100][xy/100] = 'X';
-			break;
-		}
-	}//이 위로는 필연적인 룰에 따라 고르는 부분
+	if(xy == -1) {
+		for(i=19; i>=10; i--) {
+			xy = find_straight(win_string[i]);
+			if(xy != -1) {
+				board[xy%100][xy/100] = 'X';
+				break;
+			}
+		}//이 위로는 필연적인 룰에 따라 고르는 부분
+	}
 	i = 0;
 	if(xy == -1) put(record(Xgibo), 'X');//랜덤으로 고르는 부분
 	return -1;
 }
+
+int valid(int x, int y) {
+	if(x >= 0 && y >= 0 && x < 20 && y < 20) return 1;
+	else return 0;
+}
+
+int Human(char ox) {
+	show();
+	int x = 20, y = 20;
+	while(board[y][x] != ' ' || !valid(x, y)) {
+		printf("좌표를 넣으세요.(x y)");
+		scanf("%d %d", &x, &y);
+	}
+
+	board[y][x] = ox;
+	int i, j, k;
+	for(i=y, j=x; board[i][j] == ox && i>=0; i--);
+	for(k=0; board[++i][j] == ox && i<20; k++);
+	if(k < 5) {
+		for(i=y, j=x; board[i][j] == ox && j>=0; j--);
+		for(k=0; board[i][++j] == ox && j<20; k++);
+	}
+	if(k < 5) {
+		for(i=y, j=x; board[i][j] == ox && valid(j, i); i--, j--);
+		for(k=0; board[++i][++j] == ox && valid(j, i); k++);
+	}
+	if(k < 5) {
+		for(i=y, j=x; board[i][j] == ox && valid(j, i); i--, j++);
+		for(k=0; board[++i][--j] == ox && valid(j, i); k++);
+	}
+	if(k > 4) {
+		win(ox);
+		return 100*x + y;
+	} else return -1;
+}
+
+
 

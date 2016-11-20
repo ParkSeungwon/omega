@@ -9,7 +9,7 @@ typedef struct Tree {
 	struct Tree *left, *right;
 } Tree;
 
-Tree* tadd(Tree* p, element* data, unsigned* r) {
+Tree* tadd(Tree* p, element* data, unsigned* r) {//r은 리절트 값의 배열
 	int sz = data[0] * 100 + data[1] + HEADER_SIZE;
 	int rsz = 2 * (data[4] * 100 + data[5]);
 	if(!p) {
@@ -83,7 +83,7 @@ void tshow(Tree* p) {
 	} 
 }
 
-void tsave(Tree* p, FILE* f) {
+void tsave(Tree* p, FILE* f) {//트리의 내용을 파일에 써넣음
 	if(p) {
 		for(int i=0; i<p->data[0]*100 + p->data[1] + HEADER_SIZE; i++) 
 			fprintf(f, "%d ", p->data[i]);
@@ -98,7 +98,7 @@ void tsave(Tree* p, FILE* f) {
 
 }
 
-Tree* tload(Tree* p, FILE* fp) {
+Tree* tload(Tree* p, FILE* fp) {//파일의 내용을 트리에 넣음
 	Tree tree;
 	int a, b, c, d, e, f;
 	while(EOF != fscanf(fp, "%d %d %d %d %d %d", &a, &b, &c, &d, &e, &f)) {

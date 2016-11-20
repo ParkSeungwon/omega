@@ -1,15 +1,8 @@
-//should be compiled with gcc -x c option to force C compile (.C -> g++ default)
-#include<stdio.h>
-#include<time.h>
-#include<string.h>
-#include<stdlib.h>
 #include<dirent.h>
-#include"queue.h"
-int Xai(); 
-int Oai();
-char* compress();
-void decompress(char*);
-extern char board[20][20];
+#include<stdlib.h>
+#include<stdio.h>
+#include<string.h>
+typedef char element;
 typedef struct Tree {
 	element* data;
 	unsigned int* result;
@@ -18,14 +11,7 @@ typedef struct Tree {
 extern struct Tree* tree;
 extern Tree* hash[400];
 
-int main(int c, char** v)
-{
-	if(c < 2) {
-		printf("usage : %s [times]", v[0]);
-		return 0;
-	}
-
-
+void read_dat() {
     DIR *dp;
     struct dirent *dirp;
     dp  = opendir(".");
@@ -39,30 +25,9 @@ int main(int c, char** v)
 		}
     }
     closedir(dp);
+}
 
-
-	srand(time(NULL));
-	int game = atoi(v[1]);
-	while(game--) {
-		printf("game %d\n", game);
-		init();
-		for(int i=0; i<200; i++) {
-			int xy = Oai();
-		//	show();
-			if(xy != -1) {
-				printf("O win\n");
-				break;
-			}
-			xy = Xai();
-		//	show();
-			if(xy != -1) {
-				printf("X win\n");
-				break;
-			}
-		}
-		show();
-	}
-
+void write_dat() {
 	for(int i=0; i<400; i++) if(hash[i]) {
 		char b[10];
 		snprintf(b, 10, "%d", i);
