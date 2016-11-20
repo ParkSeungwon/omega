@@ -7,6 +7,7 @@ int Oai();
 int Human(char);
 void read_dat();
 void write_dat();
+char ox;
 
 int main(int c, char** v)
 {
@@ -29,6 +30,7 @@ int main(int c, char** v)
 		for(int i=0; i<200; i++) {
 			int xy;
 			if(ox == 'O') xy = Human(ox);
+			else if(ox == 'X') xy = OH();
 			else xy = Oai();
 		//	show();
 			if(xy != -1) {

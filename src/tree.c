@@ -36,6 +36,17 @@ Tree* tadd(Tree* p, element* data, unsigned* r) {//r은 리절트 값의 배열
 	return p;
 }
 
+Tree* tfind(Tree* p, element* data) {
+	if(!p) return p;
+	int sz = data[0] * 100 + data[1] + HEADER_SIZE;
+	int equal = 1;
+	for(int i=HEADER_SIZE; equal && i < sz; i++) {
+		if(p->data[i] > data[i])  return tfind(p->left, data);
+		else if(p->data[i] < data[i]) return tfind(p->right, data);
+	}
+	return p;
+}
+
 Tree* tinsert(Tree* p, element* data, int win) {//win 1 lose 0
 	int sz = data[0] * 100 + data[1] + HEADER_SIZE;
 	if(!p) {

@@ -103,6 +103,56 @@ int Oai() {
 	return -1;
 }
 
+int OH() {
+	int xy, i;
+	for(i=0; i<20; i++) {
+		xy = find_straight(win_string[i]);
+		if(xy != -1) {
+			board[xy%100][xy/100] = 'O';
+			break;
+		}
+	}
+	if(i<5) {
+		win('O');
+		return xy;// 이 위로는 필연적인 룰에 따라 
+	}
+	i = 0;//reuse
+	int r;
+	if(xy == -1) {
+		char* data = compress();
+		int sz = data[0] * 100 + data[1];
+		int rsz = 2 * check();
+		Tree* p = tfind(hash[sz], data);
+		int sum = 0, max = 0;
+		if(p) for(int i=0; i<rsz; i++) sum += p->result[i];
+		if(sum < 100 || !p) for(int i=0; i<rsz/2; i++) {
+			for(int j=0; j<10; j++) {
+				init();
+				decompress(data);
+				check();
+				put(i, 'O');
+				pre_cog('X');//simulate
+			}
+		}
+		init();
+		decompress(data);
+		p = tfind(hash[sz], data);
+		for(int i=0; i<rsz; i++) {
+			if(i % 2) {
+				float f = (float)p->result[i] / (p->result[i-1] + 1);
+				if(f > max) {
+					max = f;
+					r = i/2;
+				}
+			}
+		}
+		check();
+		put(r, 'O');
+		free(data);
+	}
+	return -1;
+}
+
 int Xai() {
 	int xy, i;
 	for(i=9; i>=0; i--) {
@@ -143,6 +193,7 @@ int Human(char ox) {
 		scanf("%d %d", &x, &y);
 	}
 
+	//이겼는지 확인
 	board[y][x] = ox;
 	int i, j, k;
 	for(i=y, j=x; board[i][j] == ox && i>=0; i--);
@@ -165,5 +216,12 @@ int Human(char ox) {
 	} else return -1;
 }
 
+void pre_cog(char ox) {
+	if(ox == 'X') Xai();
+	for(int i=0; i<200; i++) {
+		if(Oai() != -1) break;
+		if(Xai() != -1) break;
+	}
+}
 
 
