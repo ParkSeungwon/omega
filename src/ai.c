@@ -2,6 +2,7 @@
 #include<time.h>
 #include<stdio.h>
 #include<stdlib.h>
+#include<assert.h>
 typedef char element;
 typedef struct Tree {
 	element* data;
@@ -43,7 +44,7 @@ void win(char ox) {
 	}
 }
 
-int check() {//2칸 이내에 v마크를 하고 v마크의 개수를 리턴
+int check() {//2칸 이내에 v마크를 하고 v마크의 개수를 리턴.put과 쌍을 이룬다.
 	int r = 0;
 	for(int y=0; y<20; y++) for(int x=0; x<20; x++) {
 		if(board[y][x] == 'O' || board[y][x] == 'X') {
@@ -123,7 +124,8 @@ int OH() {
 		int sz = data[0] * 100 + data[1];
 		int rsz = 2 * check();
 		Tree* p = tfind(hash[sz], data);
-		int sum = 0, max = 0;
+		int sum = 0;
+		float max = 0;
 		if(p) for(int i=0; i<rsz; i++) sum += p->result[i];
 		if(sum < 100 || !p) {
 			for(int j=0; j<100; j++) {
@@ -137,9 +139,10 @@ int OH() {
 		init();
 		decompress(data);
 		p = tfind(hash[sz], data);
+		assert(p);
 		for(int i=0; i<rsz; i++) {
 			if(i % 2) {
-				float f = (float)p->result[i] / (p->result[i-1] + 1);
+				float f = (float)p->result[i] / (p->result[i-1] + 1);//crash
 				if(f > max) {
 					max = f;
 					r = i/2;
